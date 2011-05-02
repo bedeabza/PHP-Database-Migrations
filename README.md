@@ -3,6 +3,8 @@ PHP Database Migrations
 
 This Zend Framework component offers support for up/down migrations for your database schema, as well as for fixtures for your data.
 
+Currently the only supported database type is MySQL, but in the future I think about adding support for PostgreSQL.
+
 Instalation
 -----------
 
