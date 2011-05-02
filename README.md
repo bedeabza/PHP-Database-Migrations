@@ -41,21 +41,21 @@ To rollback the database schema you run the following command: `php bin/migrate 
 Examples
 --------
 
-`$this->createTable('users', array(
-    'id' => array('type' => 'int', 'unsigned' => true, 'primary' => true, 'ai' => true),
-    'email' => array('type' => 'varchar'),
-    'password' => array('type' => 'varchar', 'length' => 32)
-));`
+    $this->createTable('users', array(
+        'id' => array('type' => 'int', 'unsigned' => true, 'primary' => true, 'ai' => true),
+        'email' => array('type' => 'varchar'),
+        'password' => array('type' => 'varchar', 'length' => 32)
+    ));
 
-`$this->addColumn('users', 'name', array(
-    'type' => 'varchar',
-    'after' => 'id'
-));`
+    $this->addColumn('users', 'name', array(
+        'type' => 'varchar',
+        'after' => 'id'
+    ));
 
-`$this->addIndex('users', 'email', 'unique');`
+    $this->addIndex('users', 'email', 'unique');
 
-`$this->query("UPDATE users SET name = 'john' WHERE name = 'johnny'");`
+    $this->query("UPDATE users SET name = 'john' WHERE name = 'johnny'");
 
-`$this->dropColumn('users', 'name')`
+    $this->dropColumn('users', 'name');
 
-`$this->dropTable('users');`
+    $this->dropTable('users');`
