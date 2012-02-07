@@ -82,8 +82,8 @@ final class Mig_Manager
 		if(!is_dir($storage)) throw new Mig_Exception('The storage folder "'.$storage.'" does not exist');
 		self::$_storage = $storage;
 
-		if(!is_dir(self::getMigrationStorage())) throw new Mig_Exception('The migrations storage folder "'.self::_getMigrationStorage().'" does not exist');
-		if(!is_dir(self::getFixtureStorage())) throw new Mig_Exception('The migrations storage folder "'.self::_getFixtureStorage().'" does not exist');
+		if(!is_dir(self::getMigrationStorage())) throw new Mig_Exception('The migrations storage folder "'.self::getMigrationStorage().'" does not exist');
+		if(!is_dir(self::getFixtureStorage())) throw new Mig_Exception('The migrations storage folder "'.self::getFixtureStorage().'" does not exist');
 	}
 
 	/**
