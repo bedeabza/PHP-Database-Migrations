@@ -7,6 +7,6 @@
  * @copyright 2010 Dragos Badea (bedeabza@gmail.com)
  */
 
-class Mig_Exception extends Zend_Exception
+class Pms_Exception extends Zend_Exception
 {
 }

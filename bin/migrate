@@ -15,11 +15,11 @@ ini_set('display_errors','On');
 //setup autoloading
 require_once 'Zend'. DS .'Loader' . DS . 'Autoloader.php';
 $autoloader = Zend_Loader_Autoloader::getInstance();
-$autoloader->registerNamespace('Mig_');
+$autoloader->registerNamespace('Pms_');
 
 //connect to the database with the application's config file
 //you can pass the database details also manual
 $config = new Zend_Config_Xml(CONFIG_PATH . DS . 'database.xml', 'development');
 
-Mig_Manager::init(ROOT_PATH . DS . 'data', $config->adapter, $config->params->toArray());
-Mig_Manager::dispatch();
+Pms_Manager::init(ROOT_PATH . DS . 'data', $config->adapter, $config->params->toArray());
+Pms_Manager::dispatch();
